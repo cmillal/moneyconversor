@@ -99,7 +99,7 @@ const renderCurrencyChart = (currencyData) => {
         currencyChart.destroy();
     }
     
-    // Ordenar objeto por fechas de forma ascendente
+
     currencyData.sort( (a, b) => new Date(a.fecha) - new Date(b.fecha) )
     // Generar arrays de etiquetas y valores para grafico
     const labels = currencyData.map(data => data.fecha);
