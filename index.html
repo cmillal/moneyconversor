@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor</title>
+    <link rel="stylesheet" href="./asset/style.css">
+</head>
+<body>
+    	<!-- Container -->
+	<div class="container-fluid d-flex align-items-center justify-content-center min-vh-100">
+		<!-- Card -->
+		<div class="card glass-card">
+
+			<!-- Card Header -->
+			<div class="card-header">
+				<div class="header-icon">
+					<i class="fa-solid fa-money-bill-transfer"></i>
+				</div>
+				<h4 class="card-title">
+					Conversor de Moneda Nacional
+				</h4>
+			</div>
+			<!-- Card Header -->
+
+			<!-- Card Body -->
+			<div class="card-body">
+				<!-- Formulario -->
+				<form id="formDivisas" method="post">
+
+					<div class="mb-3">
+						<label for="amount" class="form-label">Ingrese Monto en CLP</label>
+						<input id="amount" type="text" class="form-control form-control-lg" placeholder="Ejemplo: 10000" />
+					</div>
+
+					<div class="mb-3">
+						<label for="currency" class="form-label">Seleccione Moneda</label>
+						<div class="select-wrapper">
+							<select id="currency" class="form-select form-select-lg">
+								<option value="dolar">Dólar Estadounidense (USD)</option>
+								<option value="euro">Euro (EUR)</option>
+								<option value="uf">Unidad de Fomento (UF)</option>
+								<option value="utm">Unidad Tributaria Mensual (UTM)</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<button type="submit" class="btn btn-convert btn-lg w-100">
+							<i class="fa-solid fa-rotate"></i> Convertir
+						</button>
+					</div>
+
+				</form>
+				<!-- Formulario -->
+
+				<!-- Resultado -->
+				<div id="result" class="text-center mt-4">
+					<div class="result-amount d-none">
+						<h4 class="result-value"></h4>
+						<span class="result-label">A la fecha actual</span>
+					</div>
+				</div>
+
+				<!-- Gráfico -->
+				<div class="chart-container">
+					<div class="chart-title">Tendencia de Cambio (Últimos 10 días)</div>
+					<canvas id="currencyChart"></canvas>
+				</div>
+				<!-- Gráfico -->
+			</div>
+			<!-- Card Body -->
+
+		</div>
+		<!-- Card -->
+	</div>
+	<!-- Container -->
+
+	<!-- Footer -->
+	<div class="footer">
+		<div class="footer-text">© 2025 Desarrollado por Vladimir Faundez. Todos los derechos reservados.</div>
+		<a href="https://github.com/vfaundez-dev" class="footer-link" target="_blank">
+			<i class="fab fa-github"></i>
+			Ver mi GitHub
+		</a>
+	</div>
+
+	<!-- Bootstrap 5 JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+	<!-- Scripts -->
+
+
+
+
+
+    <script src="./asset/script.js"></script>
+</body>
+</html>
